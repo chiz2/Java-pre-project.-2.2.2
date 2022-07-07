@@ -28,11 +28,7 @@ public class CarsService {
     public List<Car> getCars(int x) {
         List<Car> carsL = new ArrayList();
         if (!(cars.isEmpty()) && x <= cars.size()) {
-            for (int i = 0; i < x ; i++) {
-                carsL.add((Car) cars.get(i));
-            }
-        } else {
-            return null;
+            carsL.addAll(cars.subList(0, x));
         }
         return carsL;
     }
