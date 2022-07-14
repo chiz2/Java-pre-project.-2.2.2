@@ -16,24 +16,12 @@ public class Car {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public int getSeries() {
         return series;
     }
 
-    public void setSeries(int series) {
-        this.series = series;
-    }
-
     public int gethP() {
         return hP;
-    }
-
-    public void sethP(int hP) {
-        this.hP = hP;
     }
 
     @Override
