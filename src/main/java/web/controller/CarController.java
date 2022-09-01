@@ -20,7 +20,7 @@ public class CarController {
     }
 
     @GetMapping("/cars")
-    public String getCars(@RequestParam(required = false) Integer count, ModelMap model) throws NullPointerException {
+    public String getCars(@RequestParam(required = false) Integer count, ModelMap model) {
         if (count == null  || count > 5) {
             model.addAttribute("cars", service.getCars());
         } else {
@@ -28,6 +28,4 @@ public class CarController {
         }
         return "cars";
     }
-
-
 }
